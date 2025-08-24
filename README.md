@@ -1,3 +1,1 @@
-Hallo ... Selamat Datang di Repository Saya
--- Web ini saya buat untuk memenuhi tugas kuliah saya --
-Free source code untuk teman teman yang ingin belajar bersama
+Sistem Manajemen Inventory berbasis web yang dibangun menggunakan PHP. Aplikasi ini menyediakan fitur lengkap untuk mengelola stok barang, transaksi masuk/keluar, dan pelaporan inventory secara real-time.
