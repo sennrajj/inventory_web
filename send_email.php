@@ -15,21 +15,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Aktifkan debug output
-        $mail->SMTPDebug = 2; // Ubah ke 0 untuk menonaktifkan debug output
+        $mail->SMTPDebug = 2;
         $mail->Debugoutput = 'html';
 
         // Server settings
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'raj.boygeneration21@gmail.com'; // Ganti dengan email Anda
-        $mail->Password = 'zabc gvax flnp zqkg'; // Ganti dengan password aplikasi yang baru Anda buat
+        $mail->Username = 'raj.boygeneration21@gmail.com';
+        $mail->Password = 'zabc gvax flnp zqkg';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
         // Recipients
         $mail->setFrom('raj.boygeneration21@gmail.com', $nama);
-        $mail->addAddress('rajpresent09@gmail.com'); // Ganti dengan email tujuan
+        $mail->addAddress('rajpresent09@gmail.com'); //
 
         // Content
         $mail->isHTML(false);

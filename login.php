@@ -3,11 +3,9 @@ session_start();
 include 'koneksi.php';
 
 if(isset($_POST['login'])) {
-    // Ambil data dari form
     $username = htmlspecialchars($_POST['user']);
     $password = htmlspecialchars($_POST['pass']);
 
-    // Gunakan prepared statement untuk keamanan
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
@@ -36,7 +34,6 @@ if(isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Link style CSS Bootstrap 5 -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Link style CSS Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="img/favicon.png">
@@ -55,14 +52,12 @@ if(isset($_POST['login'])) {
 </head>
 <body style="padding-bottom: 80px; overflow-y: hidden;">
 
-    <!-- Navbar Login -->
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand fw-semibold" href="login.php">Stocksavvy</a>
         </div>
     </nav>
 
-    <!-- Login Form -->
     <div class="container mt-5">
         <div class="form-login">
             <h3 class="text-center fw-semibold">ADMIN LOGIN</h3>
@@ -88,14 +83,12 @@ if(isset($_POST['login'])) {
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3 fixed-bottom">
         <div class="container">
             <p class="mb-0">© 2024 Stocksavvy. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Link src Javascript Bootstrap 5 -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

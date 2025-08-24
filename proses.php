@@ -4,7 +4,6 @@ include 'koneksi.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $action = $_POST['action'];
 
-    // Menambahkan Barang Ke Dalam Database
     switch ($action) {
         case 'tambah_barang':
             $nama_barang = $_POST['nama_barang'];
@@ -23,14 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             break;
 
-        // Menambahkan Barang Masuk Ke Dalam Database
         case 'barang_masuk':
             $id = $_POST['id'];
             $nama_barang = $_POST['nama_barang'];
             $tanggal = $_POST['tanggal'];
             $stock_masuk = $_POST['stock_masuk'];
 
-            // SQL untuk UPDATE Data di dalam Database
             $sql_update = "UPDATE tb_inventory SET stock = stock + '$stock_masuk' WHERE id = '$id'";
 
             if ($conn->query($sql_update) === TRUE) {
@@ -48,14 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             break;
 
-        // Tambahkan case lainnya di sini jika diperlukan
         case 'barang_keluar':
             $id = $_POST['id'];
             $nama_barang = $_POST['nama_barang'];
             $tanggal = $_POST['tanggal'];
             $stock_keluar = $_POST['stock_keluar'];
 
-            // SQL untuk UPDATE Data di dalam Database
             $sql_update = "UPDATE tb_inventory SET stock = stock - '$stock_keluar' WHERE id = '$id'";
             if ($conn->query($sql_update) === TRUE) {
                 // Insert data kedalam Table Barang Keluar

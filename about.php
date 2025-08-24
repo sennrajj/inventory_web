@@ -15,7 +15,6 @@ if (!isset($_SESSION['stat_login']) || $_SESSION['stat_login'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Link style CSS Bootstrap 5 -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Link style CSS Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="img/favicon.png">
@@ -39,7 +38,6 @@ if (!isset($_SESSION['stat_login']) || $_SESSION['stat_login'] !== true) {
 </head>
 <body>
 
-    <!-- Navbar Bootstrap 5 -->
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand fw-semibold" href="index.php">Stocksavvy</a>
@@ -73,7 +71,6 @@ if (!isset($_SESSION['stat_login']) || $_SESSION['stat_login'] !== true) {
             </li>
           </ul>
           
-          <!-- Form & Button Search -->
           <form class="d-flex" role="search" action="index.php" method="GET">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
               <button class="btn btn-outline-light" type="submit">Search</button>
@@ -129,14 +126,12 @@ if (!isset($_SESSION['stat_login']) || $_SESSION['stat_login'] !== true) {
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3">
         <div class="container">
             <p class="mb-0">© 2024 Stocksavvy. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Link src Javascript Bootstrap 5 -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

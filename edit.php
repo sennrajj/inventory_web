@@ -113,7 +113,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body style="padding-bottom: 80px; overflow-x: hidden;">
 
-    <!-- Navbar Bootstrap 5 -->
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand fw-semibold" href="index.php">Stocksavvy</a>
@@ -147,7 +146,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </li>
           </ul>
           
-          <!-- Form & Button Search -->
           <form class="d-flex" role="search" action="index.php" method="GET">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
               <button class="btn btn-outline-light" type="submit">Search</button>
@@ -221,14 +219,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3 fixed-bottom">
         <div class="container">
             <p class="mb-0">© 2024 Stocksavvy. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Link src Javascript Bootstrap 5 -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
